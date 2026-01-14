@@ -23,14 +23,16 @@ namespace FlowerEvidence
     /// </summary>
     public partial class MainWindow : Window
     {
+        ObservableCollection<Flower> Data { get; set; }
         public IFlowerManager Manager { get; set; }
         public MainWindow()
         {
             IFlowerRepository repository = new FlowerRepository(new FlowerContext());
             Manager = new FlowerManager(repository);
+            Data = new ObservableCollection<Flower>(Manager.GetAll());
             InitializeComponent();
 
-            LV.ItemsSource = new ObservableCollection<Flower>(Manager.GetAll());
+            LV.ItemsSource = Data;
         }
     }
 }

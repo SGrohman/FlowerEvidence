@@ -1,0 +1,24 @@
+﻿<Window x:Class="FlowerEvidence.Windows.AddNewFlowerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlowerEvidence.Windows"
+        mc:Ignorable="d"
+        Title="AddNewFlowerWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="200,100,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Margin="75,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Gebus" HorizontalAlignment="Left" Margin="200,100,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="GenusInput" HorizontalAlignment="Left" Margin="75,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Color" HorizontalAlignment="Left" Margin="200,150,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ColorInput" HorizontalAlignment="Left" Margin="75,200,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Purple"/> "
+        </ComboBox>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="75,250,0,0" VerticalAlignment="Top" Width="75" /> 
+        <Button Content="Discard &gt; Close" HorizontalAlignment="Left" Margin="200,250,0,0" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</Window>
