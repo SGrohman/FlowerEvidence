@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using FlowerEvidence.Windows;
 
 
 namespace FlowerEvidence
@@ -31,8 +32,27 @@ namespace FlowerEvidence
             Manager = new FlowerManager(repository);
             Data = new ObservableCollection<Flower>(Manager.GetAll());
             InitializeComponent();
-
             LV.ItemsSource = Data;
         }
+        private void OnAddClick(object sender, RoutedEventArgs e)
+        {
+            AddNewFlowerWindow AddWindow = new(Manager);
+            AddWindow.Closed += (s, e) => { Data.Add(AddWindow.NewFlower); };
+            AddWindow.ShowDialog();
+            
+        }
+
+        private void OnRemoveClick(object sender, RoutedEventArgs e)
+        {
+            Flower toRemove = LV.SelectedItem as Flower;
+            if (toRemove != null)
+            {
+                Manager.Remove(toRemove);
+                Data.Remove(toRemove);
+            }
+            
+        }
+
+        
     }
 }

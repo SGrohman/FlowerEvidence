@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlowerEvidence.Windows"
         mc:Ignorable="d"
-        Title="AddNewFlowerWindow" Height="450" Width="800">
+        
+        Title="AddNewFlowerWindow" Height="270" Width="298">
     <Grid>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="200,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Margin="75,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="200,50,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Margin="75,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <Label Content="Gebus" HorizontalAlignment="Left" Margin="200,100,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="GenusInput" HorizontalAlignment="Left" Margin="75,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Color" HorizontalAlignment="Left" Margin="200,150,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ColorInput" HorizontalAlignment="Left" Margin="75,200,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="ColorInput" HorizontalAlignment="Left" Margin="75,150,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
-            <ComboBoxItem Content="Purple"/> "
+            <ComboBoxItem Content="Purple"/> 
         </ComboBox>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="75,250,0,0" VerticalAlignment="Top" Width="75" /> 
-        <Button Content="Discard &gt; Close" HorizontalAlignment="Left" Margin="200,250,0,0" VerticalAlignment="Top" Width="75" />
+        <Button Content="Save" HorizontalAlignment="Left" Margin="75,200,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click" />
+        <Button Content="Discard &gt; Close" HorizontalAlignment="Left" Margin="169,200,0,0" VerticalAlignment="Top" Width="90" />
     </Grid>
 </Window>
